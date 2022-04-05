@@ -5,6 +5,18 @@ import { useState } from "react";
 export default function Home() {
   const [file, setFile] = useState(null);
 
+  const handleUpload = async () => {
+    const formData = new FormData();
+    formData.append("myFile", file)
+    try {
+
+      
+      
+    } catch (error) {
+      
+    }
+  }
+
   return (
     <div className="flex flex-col justify-center items-center">
       <h1 className="my-4 text-3xl">got a file? share like it a fake news</h1>
@@ -21,6 +33,9 @@ export default function Home() {
             }}
           />
         )}
+        <button className="w-44 bg-gray-900 p-2 my-5 rounded-md focus:outline-none">
+          Upload
+        </button>
       </div>
     </div>
   );
