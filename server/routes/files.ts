@@ -1,6 +1,6 @@
 import express from "express";
 import multer from "multer";
-import {UploadApiResponse, v2 as cloudinary } from "cloudinary";
+import { UploadApiResponse, v2 as cloudinary } from "cloudinary";
 
 const router = express.Router();
 const storage = multer.diskStorage({});
@@ -35,10 +35,9 @@ router.post("/upload", upload.single("myFile"), async (req, res) => {
     });
 
     res.status(200).json({
-      id : file._id,
+      id: file._id,
       downloadPageLink: `${process.env.API_BASE_ENDPOINT_CLIENT}/download/${file._id}`,
     });
-
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Internal server error" });

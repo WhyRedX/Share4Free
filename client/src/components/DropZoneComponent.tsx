@@ -22,7 +22,7 @@ const DropZoneComponent: FunctionComponent<{setFile:Dispatch<any>}> = ({setFile}
       >
         <input {...getInputProps()} />
         <div className={
-          "flex flex-col items-center justify-center border-2 border-dashed border-yellow-light rounded-xl h-full space-y-3"
+          "flex flex-col items-center justify-center border-2 border-dashed border-yellow-500 rounded-xl h-full space-y-3"
           +
           (isDragReject === true ? " border-red-500" : "")
           +
